@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # tweets Controller
 class TweetsController < ApplicationController
   before_action :set_tweet, only: %i[show edit update destroy]
@@ -20,7 +22,7 @@ class TweetsController < ApplicationController
     respond_to do |format|
       if @tweet.save
         format.html { redirect_to @tweet, notice: 'Tweet was successfully created' }
-        format.json {render :show, status: :created, location: @tweet }
+        format.json { render :show, status: :created, location: @tweet }
       else
         format.html { render :new }
         format.json { render json: @tweet.errors, status: :unprocessable_entity }
