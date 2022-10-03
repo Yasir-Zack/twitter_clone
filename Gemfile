@@ -8,6 +8,7 @@ ruby '2.7.0'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bulma', '~> 0.1.0'
 gem 'coffee-rails', '~> 4.2'
+gem 'devise'
 gem 'gravatar_image_tag', '~> 1.2'
 gem 'jbuilder', '~> 2.5'
 gem 'pg', '>= 0.18', '< 2.0'
