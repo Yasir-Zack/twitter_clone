@@ -6,6 +6,7 @@ class TweetsController < ApplicationController
 
   def index
     @tweets = Tweet.all.order(created_at: :DESC)
+    @tweet = Tweet.new
   end
 
   def new
