@@ -6,7 +6,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.7.0'
 
 gem 'bootsnap', '>= 1.1.0', require: false
-gem 'bulma', '~> 0.1.0'
+gem 'bulma-rails', '~> 0.9.3'
 gem 'coffee-rails', '~> 4.2'
 gem 'devise'
 gem 'gravatar_image_tag', '~> 1.2'
