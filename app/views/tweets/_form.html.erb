@@ -1,4 +1,4 @@
-<h1> New Tweet</h1>
+<div class="container-fluid w-25 border rounded shadow mb-5 p-4">
 <%= simple_form_for(@tweet) do |f| %>
 <%= f.error_notification %>
 <div class="field">
@@ -9,3 +9,4 @@
 </div>
 <%= f.button :submit, class: "button is-info" %>
 <% end %>
+</div>
