@@ -3,6 +3,7 @@
 # tweets Controller
 class TweetsController < ApplicationController
   before_action :set_tweet, only: %i[show edit update destroy]
+  before_action :authenticate_user!, except: %i[index show]
 
   def index
     @tweets = Tweet.all.order(created_at: :DESC)
