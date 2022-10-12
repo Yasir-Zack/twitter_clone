@@ -2,6 +2,8 @@
 
 # RegistrationController
 class RegistrationController < Devise::RegistrationController
+  before_action :sign_up_params, if: :devise_controller?
+
   private
 
   def sign_up_params
