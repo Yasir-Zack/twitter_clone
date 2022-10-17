@@ -11,7 +11,7 @@ class TweetsController < ApplicationController
   end
 
   def new
-    @tweet = current_user.tweet.build
+    @tweet = current_user.tweets.build
   end
 
   def show; end
@@ -19,7 +19,7 @@ class TweetsController < ApplicationController
   def edit; end
 
   def create
-    @tweet = current_user.tweet.build(tweet_params)
+    @tweet = current_user.tweets.build(tweet_params)
 
     respond_to do |format|
       if @tweet.save

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # RegistrationController
-class RegistrationController < Devise::RegistrationController
+class RegistrationController < Devise::RegistrationControl
   before_action :sign_up_params, if: :devise_controller?
 
   private
