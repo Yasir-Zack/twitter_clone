@@ -1,3 +1,33 @@
-<h1><%= @tweet.tweet %></h1>
-<%= link_to 'Back', tweets_path %> |
-<%= link_to 'Edit', edit_tweet_path %>
+<div class="box">
+  <article class="media">
+    <div class="media-left">
+      <figure class="image is-64x64">
+        <%= gravatar_image_tag(current_user.email, size: 64, alt: current_user.name) %>
+      </figure>
+    </div>
+    <div class="media-content">
+      <div class="content">
+        <p>
+          <strong><%= current_user.name%></strong><br />
+          <small><%= current_user.username %></small>
+          <br>
+          <h1><%= @tweet.tweet %></h1>
+        </p>
+      </div>
+      <nav class="level is-mobile">
+        <div class="level-left">
+          <a class="level-item" aria-label="reply">
+            <span class="icon is-small">
+              <%= link_to 'Back', tweets_path %>
+            </span>
+          </a>
+          <a class="level-item" aria-label="retweet">
+            <span class="icon is-small">
+              <%= link_to 'Edit', edit_tweet_path %>
+            </span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </article>
+</div>
