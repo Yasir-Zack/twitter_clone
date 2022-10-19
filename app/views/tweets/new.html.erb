@@ -1,8 +1,22 @@
-<h1> New Tweet</h1>
-<%= form_with model: @tweet, local: true do |f| %>
-  <div class="field mb-3 text-start">
-	<%= f.label :Tweet %><br>
-	<%= f.text_area :tweet %><br>
-	<%= f.submit 'Create Tweet' %>
-	</div>
-<% end %>
+<div class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-half">
+          <h1 class="title">New Tweet</h1>
+          <%= render 'form',tweet: @tweet %>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <nav class="navbar is-fixed-bottom">
+    <div class="navbar-menu">
+      <div class="navbar-item">
+        <div class="field is-grouped">
+          <p class="control">
+            <%= link_to 'Cancel', tweets_path, class: "button is-dark" %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </nav>
